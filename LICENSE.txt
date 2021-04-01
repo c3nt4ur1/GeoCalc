@@ -16,8 +16,11 @@ The HyperCalc project was only tested in an Win32® environment and it isn't kno
 the program work in other operational systems' terminal. Any damage that may occur will not be covered by the
 c3nt4ur1 and the use of the software is an responsabilite of the user.
 
-5.AGREEMENT
-By downloading the files from https://github.com/c3nt4ur1/HyperCalculator, you agree with the terms hereby
+5.AUTHORIZED SOURCE
+The HyperCalc project can only be downloaded from https://github.com/c3nt4ur1/HypreCalc
+
+6.AGREEMENT
+By downloading the files from https://github.com/c3nt4ur1/HyperCalc, you agree with the terms hereby
 presented.
 
 
