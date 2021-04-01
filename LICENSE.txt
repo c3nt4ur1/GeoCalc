@@ -9,7 +9,7 @@ contained in the file main.cpp, the header file mymath.h and the personalized mo
 mymath.cpp.
 
 3.AUTHORIZED USAGE
-The HyperCalc project is free for personal and comercial use inside brazilian territory and
+The HyperCalc project is free for personal and commercial use inside brazilian territory and
 abroad. Selling or having any kind of profit over the HyperCalc project is strictly
 prohibited
 
@@ -20,7 +20,8 @@ that may occur will not be covered by the c3nt4ur1 and the use of the software i
 responsabilite of the user.
 
 5.AGREEMENT
-By downloading the files from https://github.com/c3nt4ur1/HyperCalculator, you agree with the
-terms hereby presented.
+By downloading the files from https://github.com/c3nt4ur1/HyperCalculator, you agree with
+the terms hereby presented.
+
 
 São Paulo, 01/04/2021
