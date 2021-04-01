@@ -10,7 +10,7 @@
 ###### *Only square roots are working so far
 ###### **So far, we have created only the Bhaskara function
 
-### English version comming soon!
+### English version coming soon!
 
 #### Hope y'all enjoy it!
 
