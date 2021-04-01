@@ -1,0 +1,26 @@
+                                    LICENSE OF USE
+
+1.OWNERSHIP
+The HyperCalc software  and all its components belongs to the GitHub® user c3nt4ur1
+
+2.HyperCalc
+HyperCalc is an open-source project developed by c3nt4ur1, that is composed by the main class
+contained in the file main.cpp, the header file mymath.h and the personalized module
+mymath.cpp.
+
+3.AUTHORIZED USAGE
+The HyperCalc project is free for personal and comercial use inside brazilian territory and
+abroad. Selling or having any kind of profit over the HyperCalc project is strictly
+prohibited
+
+4.WARRANTY
+The HyperCalc project was only tested in an Win32® environment and it isn't know to the
+present date how does the program work in other operational systems' terminal. Any damage
+that may occur will not be covered by the c3nt4ur1 and the use of the software is an
+responsabilite of the user.
+
+5.AGREEMENT
+By downloading the files from https://github.com/c3nt4ur1/HyperCalculator, you agree with the
+terms hereby presented.
+
+São Paulo, 01/04/2021
