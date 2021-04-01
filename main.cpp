@@ -6,15 +6,13 @@ using namespace std;
 
 
 
-int main()
-{
+int main() {
 
     //Configuração do Console
     SetConsoleTitle("HyperCalc");
 
-    while (true)
-    {
-        char saida; 
+    while (true) {
+        char saida;
 
         char categoria;
 
@@ -26,8 +24,7 @@ int main()
         cout << "5)Formulas Fisicas\n";
         cin >> categoria;
 
-        if (categoria == '1')
-        {
+        if (categoria == '1') {
             double num1;
             double num2;
 
@@ -51,6 +48,13 @@ int main()
                     double total;
                     total = soma(num1, num2);
                     cout << "TOTAL: " << total << endl;
+
+                    cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                    cin >> saida;
+                    if(saida) {
+                        exit(0);
+                    }
+
                 case '2':
                     cout << "Digite o minuendo: ";
                     cin >> num1;
@@ -60,6 +64,12 @@ int main()
                     double resto;
                     resto = subtracao(num1, num2);
                     cout << "RESTO: " << resto << endl;
+
+                    cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                    cin >> saida;
+                    if(saida) {
+                        exit(0);
+                    }
                 case '3':
                     cout << "Digite o primeiro fator: ";
                     cin >> num1;
@@ -69,6 +79,12 @@ int main()
                     double produto;
                     produto = multiplicacao(num1, num2);
                     cout << "PRODUTO: " << produto << endl;
+
+                    cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                    cin >> saida;
+                    if(saida) {
+                        exit(0);
+                    }
                 case '4':
                     cout << "Digite o dividendo: ";
                     cin >> num1;
@@ -78,16 +94,17 @@ int main()
                     double quociente;
                     quociente = divisao(num1, num2);
                     cout << "QUOCIENTE: " << quociente;
+
+                    cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                    cin >> saida;
+                    if(saida) {
+                        exit(0);
+                    }
                 default:
                     cout << "Operacao Invalida\n";
+
             }
-            cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
-            cin >> saida;
-            if(saida) {
-                exit(0);
-            }
-        }
-        else if(categoria == '2') {
+        } else if (categoria == '2') {
             char funcao;
 
             cout << "Digite a funcao desejada: \n";
@@ -113,6 +130,12 @@ int main()
                 area = area_quadrado(lados);
 
                 cout << "AREA: " << area << endl;
+
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
             } else if (funcao == '2') {
                 cout << "Digite a medida do lado do cubo: ";
                 cin >> lados;
@@ -122,8 +145,7 @@ int main()
 
                 cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
                 cin >> saida;
-
-                if(saida) {
+                if (saida) {
                     exit(0);
                 }
             } else if (funcao == '3') {
@@ -137,6 +159,12 @@ int main()
 
                 area = area_triangulo(base, altura);
                 cout << "AREA: " << area << endl;
+
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
             } else if (funcao == '4') {
                 cout << "Digite o numero de lados da figura: ";
                 cin >> lados;
@@ -144,6 +172,12 @@ int main()
                 double soma_angulos_internos;
                 soma_angulos_internos = si(lados);
                 cout << "SOMA DOS ANGULOS INTERNOS: " << soma_angulos_internos << endl;
+
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
             } else if (funcao == '5') {
                 cout << "Digite o numero de lados da figura: ";
                 cin >> lados;
@@ -152,6 +186,12 @@ int main()
 
                 angulo_interno = ai(lados);
                 cout << "VALOR DE UM ANGULO INTERNO: " << angulo_interno << endl;
+
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
             } else if (funcao == '6') {
                 cout << "Digite o numero de lados da figura: ";
                 cin >> lados;
@@ -160,7 +200,13 @@ int main()
 
                 angulo_externo = ae(lados);
                 cout << "VALOR DE UM ANGULO EXTERNO: " << angulo_externo << endl;
-            } else if (funcao == '7'){
+
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
+            } else if (funcao == '7') {
                 double ca, co, hi;
 
                 cout << "Digite o Cateto Adjacente: ";
@@ -169,8 +215,14 @@ int main()
                 cin >> co;
 
                 hi = hipo(ca, co);
-                cout << "HIPOTENUSA: " << hi << endl;exit(0);
-            } else if (funcao == '8'){
+                cout << "HIPOTENUSA: " << hi << endl;
+
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if (saida) {
+                    exit(0);
+                }
+            } else if (funcao == '8') {
                 double cat1, cat2, hi;
 
                 cout << "Digite o Cateto Conhecido: ";
@@ -180,18 +232,14 @@ int main()
 
                 cat2 = cat(cat1, hi);
                 cout << "CATETO DESCONHECIDO: " << cat2 << endl;
-            } else {
-                cout << "Funcao Inexistente\n";
-            }
 
-            cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
-            cin >> saida;
-            if(saida) {
-                exit(0);
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if (saida) {
+                    exit(0);
+                }
             }
-        }
-        else if (categoria == '3')
-        {
+        } else if (categoria == '3') {
             char op;
 
             cout << "Selecione a operacao desejada: \n";
@@ -211,6 +259,12 @@ int main()
                 double power = potencia(base, expoente);
                 cout << "POTENCIA " << expoente << " DE " << base << ": " << power << endl;
 
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
+
 
             } else if (op == '2') {
                 double radical;
@@ -221,17 +275,14 @@ int main()
                 double raiz = raiz_quadrada(radical);
                 cout << "A raiz quadrada de " << radical << " e: " << raiz << endl;
 
-            } else {
-                cout << "Operacao Invalida\n";
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
             }
 
-            cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
-            cin >> saida;
-            if(saida) {
-                exit(0);
-            }
-
-        }else if(categoria == '4'){
+        } else if (categoria == '4') {
 
             char equacao;
             cout << "Digite o tipo de equacao: \n";
@@ -249,16 +300,14 @@ int main()
 
                 bhaskara(a, b, c);
 
-            } else {
-                cout << "EQUACAO INVALIDA\n";
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
+
             }
-            cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
-            cin >> saida;
-            if(saida) {
-                exit(0);
-            }
-        }
-        else if(categoria == '5'){
+        } else if (categoria == '5') {
             int formula;
             cout << "Digite a formula desejada:\n";
             cout << "DENSIDADE\n";
@@ -283,6 +332,12 @@ int main()
 
                 cout << "DENSIDADE: " << densidade << endl;
 
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
+
             } else if (formula == 2) {
                 cout << "Digite a massa: ";
                 cin >> massa;
@@ -293,6 +348,12 @@ int main()
 
                 cout << "VOLUME: " << volume << endl;
 
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
+
             } else if (formula == 3) {
                 cout << "Digite a densidade: ";
                 cin >> densidade;
@@ -301,6 +362,12 @@ int main()
 
                 massa = fun_massa(volume, densidade);
                 cout << "MASSA: " << massa << endl;
+
+                cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                cin >> saida;
+                if(saida) {
+                    exit(0);
+                }
             }
 
 
@@ -315,6 +382,12 @@ int main()
 
                     cout << "TEMPERATURA EM GRAUS FARENHEIT: " << temp_farenheit << "F\n";
 
+                    cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                    cin >> saida;
+                    if(saida) {
+                        exit(0);
+                    }
+
                 } else if (formula == 5) {
                     cout << "Digite a temperatura na escala Farenheit: ";
                     cin >> temp_farenheit;
@@ -322,6 +395,12 @@ int main()
                     temp_celsius = fare_cel(temp_farenheit);
 
                     cout << "TEMPERATURA EM GRAUS CELSIUS: " << temp_celsius << "C\n";
+
+                    cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                    cin >> saida;
+                    if(saida) {
+                        exit(0);
+                    }
 
                 } else if (formula == 6) {
                     cout << "Digite a temperatura na escala Celsius: ";
@@ -331,6 +410,12 @@ int main()
 
                     cout << "TEMPERATURA EM GRAUS KELVIN: " << temp_kelvin << "K\n";
 
+                    cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                    cin >> saida;
+                    if(saida) {
+                        exit(0);
+                    }
+
                 } else if (formula == 7) {
                     cout << "Digite a temperatura em graus Kelvin: ";
                     cin >> temp_kelvin;
@@ -338,17 +423,16 @@ int main()
                     temp_celsius = kel_cel(temp_kelvin);
 
                     cout << "TEMPERATURA EM GRAUS CELSIUS: " << temp_celsius << "C\n";
+
+                    cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
+                    cin >> saida;
+                    if(saida) {
+                        exit(0);
+                    }
                 }
 
             }
-            cout << "DIGITE EXIT E PRESSIONE ENTER PARA CONTINUAR...\n";
-            cin >> saida;
-            if(saida) {
-                exit(0);
-            }
-        }
-        else
-        {
+        } else {
             cout << "Opcao Invalida\n";
             cout << endl;
         }
