@@ -1,21 +1,19 @@
 #include <iostream>
 #include <cstdlib>
 #include <windows.h>
-#include "mymath.h"
 #include "mainFuncs.h"
-
+#define OPERACOES_BASICAS '1'
+#define FORMULAS_GEOMETRICAS '2'
+#define POTENCIAS_E_RAIZES '3'
+#define EQUACOES '4'
+#define FORMULAS_FISICAS '5'
 using namespace std;
-
-
-
 int main() {
 
     //Configuração do Console
     SetConsoleTitle("HyperCalc");
 
     while (true) {
-        char saida;
-
         char categoria;
 
         cout << "Digite o numero da categoria de calculo desejado: \n";
@@ -26,34 +24,34 @@ int main() {
         cout << "5)Formulas Fisicas\n";
         cin >> categoria;
 
-        if (categoria == '1') {
+        if (categoria == OPERACOES_BASICAS) {
             cat1();
             //em mainFuncs.cpp/.h
             cout << "Pressione qualquer tecla para continuar...\n";
             cin.ignore();
             cin.get();
             exit(0);
-        } else if (categoria == '2') {
+        } else if (categoria == FORMULAS_GEOMETRICAS) {
             cat2();
             cout << "Pressione qualquer tecla para continuar...\n";
             cin.ignore();
             cin.get();
             exit(0);
-        } else if (categoria == '3') {
+        } else if (categoria == POTENCIAS_E_RAIZES) {
             cat3();
             cout << "Pressione qualquer tecla para continuar...\n";
             cin.ignore();
             cin.get();
             exit(0);
 
-        } else if (categoria == '4') {
+        } else if (categoria == EQUACOES) {
 
             cat4();
             cout << "Pressione qualquer tecla para continuar...\n";
             cin.ignore();
             cin.get();
             exit(0);
-        } else if (categoria == '5') {
+        } else if (categoria == FORMULAS_FISICAS) {
             cat5();
             cout << "Pressione qualquer tecla para continuar...\n";
             cin.ignore();
