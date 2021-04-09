@@ -3,4 +3,4 @@ project(HyperCalc)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(HyperCalc main.cpp mymath.cpp mymath.h)
+add_executable(HyperCalc main.cpp mymath.cpp mymath.h mainFuncs.cpp mainFuncs.h)

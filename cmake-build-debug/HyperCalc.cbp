@@ -83,6 +83,12 @@
 		<Unit filename="C:/Users/Adriano.KRULL4/Documents/Projetos C++/HyperCalc/main.cpp">
 			<Option target="HyperCalc"/>
 		</Unit>
+		<Unit filename="C:/Users/Adriano.KRULL4/Documents/Projetos C++/HyperCalc/mainFuncs.cpp">
+			<Option target="HyperCalc"/>
+		</Unit>
+		<Unit filename="C:/Users/Adriano.KRULL4/Documents/Projetos C++/HyperCalc/mainFuncs.h">
+			<Option target="HyperCalc"/>
+		</Unit>
 		<Unit filename="C:/Users/Adriano.KRULL4/Documents/Projetos C++/HyperCalc/mymath.cpp">
 			<Option target="HyperCalc"/>
 		</Unit>

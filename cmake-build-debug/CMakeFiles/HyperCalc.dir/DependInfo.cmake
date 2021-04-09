@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Adriano.KRULL4/Documents/Projetos C++/HyperCalc/main.cpp" "C:/Users/Adriano.KRULL4/Documents/Projetos C++/HyperCalc/cmake-build-debug/CMakeFiles/HyperCalc.dir/main.cpp.obj"
+  "C:/Users/Adriano.KRULL4/Documents/Projetos C++/HyperCalc/mainFuncs.cpp" "C:/Users/Adriano.KRULL4/Documents/Projetos C++/HyperCalc/cmake-build-debug/CMakeFiles/HyperCalc.dir/mainFuncs.cpp.obj"
   "C:/Users/Adriano.KRULL4/Documents/Projetos C++/HyperCalc/mymath.cpp" "C:/Users/Adriano.KRULL4/Documents/Projetos C++/HyperCalc/cmake-build-debug/CMakeFiles/HyperCalc.dir/mymath.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

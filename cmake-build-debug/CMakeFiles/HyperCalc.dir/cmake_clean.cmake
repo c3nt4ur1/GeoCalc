@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/HyperCalc.dir/main.cpp.obj"
+  "CMakeFiles/HyperCalc.dir/mainFuncs.cpp.obj"
   "CMakeFiles/HyperCalc.dir/mymath.cpp.obj"
   "HyperCalc.exe"
   "HyperCalc.exe.manifest"
