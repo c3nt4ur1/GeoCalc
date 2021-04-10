@@ -1,12 +1,15 @@
+//Inclusões
 #include <iostream>
 #include <cstdlib>
 #include <windows.h>
 #include "mainFuncs.h"
+//Constantes
 #define OPERACOES_BASICAS '1'
 #define FORMULAS_GEOMETRICAS '2'
 #define POTENCIAS_E_RAIZES '3'
 #define EQUACOES '4'
 #define FORMULAS_FISICAS '5'
+//Namespaces
 using namespace std;
 int main() {
 
@@ -66,8 +69,8 @@ int main() {
 }
 
 //   _______   _______   __      __   ___________   ________    _     _    ________    __
-// /  _____/  | _____|  | |    /  |  |___    ___|  |  ___   |  | |   | |  |   ____ |  |__|
-// |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  _   __|   __
+// /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|
+// |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  |__| _|   __
 // |  |       | ____|   | | / / | |      |  |      |   __   |  | |   | |  | | \ \     |  |
 // |  |____   | |____   | |/ /  | |      |  |      |  |  |  |  | |___| |  | |  \ \    |  |
 // \_______/  |______|  |___/   |_|      |__|      |__|  |__|   \_____/   |_|   \_\   |__|

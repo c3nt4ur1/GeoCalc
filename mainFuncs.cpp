@@ -20,51 +20,44 @@ void cat1(){
 
     cin >> operacao;
 
-    switch (operacao) {
-        case '1':
-            cout << "Digite a primeira parcela: ";
-            cin >> num1;
-            cout << "Digite a segunda parcela: ";
-            cin >> num2;
+    if(operacao == '1'){
+        cout << "Digite a primeira parcela: ";
+        cin >> num1;
+        cout << "Digite a segunda parcela: ";
+        cin >> num2;
 
-            double total;
-            total = soma(num1, num2);
-            cout << "TOTAL: " << total << endl;
+        double total;
+        total = soma(num1, num2);
+        cout << "TOTAL: " << total << endl;
+    }else if(operacao == '2'){
+        cout << "Digite o minuendo: ";
+        cin >> num1;
+        cout << "Digite o subtraendo: ";
+        cin >> num2;
 
+        double resto;
+        resto = subtracao(num1, num2);
+        cout << "RESTO: " << resto << endl;
+    }else if(operacao == '3'){
+        cout << "Digite o primeiro fator: ";
+        cin >> num1;
+        cout << "Digite o segundo fator: ";
+        cin >> num2;
 
-        case '2':
-            cout << "Digite o minuendo: ";
-            cin >> num1;
-            cout << "Digite o subtraendo: ";
-            cin >> num2;
+        double produto;
+        produto = multiplicacao(num1, num2);
+        cout << "PRODUTO: " << produto << endl;
+    }else if(operacao == '4'){
+        cout << "Digite o dividendo: ";
+        cin >> num1;
+        cout << "Digite o divisor: ";
+        cin >> num2;
 
-            double resto;
-            resto = subtracao(num1, num2);
-            cout << "RESTO: " << resto << endl;
-
-        case '3':
-            cout << "Digite o primeiro fator: ";
-            cin >> num1;
-            cout << "Digite o segundo fator: ";
-            cin >> num2;
-
-            double produto;
-            produto = multiplicacao(num1, num2);
-            cout << "PRODUTO: " << produto << endl;
-
-        case '4':
-            cout << "Digite o dividendo: ";
-            cin >> num1;
-            cout << "Digite o divisor: ";
-            cin >> num2;
-
-            double quociente;
-            quociente = divisao(num1, num2);
-            cout << "QUOCIENTE: " << quociente;
-
-        default:
-            cout << "Operacao Invalida\n";
-
+        double quociente;
+        quociente = divisao(num1, num2);
+        cout << "QUOCIENTE: " << quociente;
+    }else {
+        cout << "Operacao Invalida\n";
     }
 }
 void cat2(){
