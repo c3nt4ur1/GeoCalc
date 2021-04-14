@@ -21,16 +21,25 @@ using namespace std;
 int main() {
     //Configuração do Console
     SetConsoleTitle("HyperCalc");
+    //Programa vai dentro desse loop
     while (true) {
         char categoria;
-        cout << "Bem vindo ao HyperCalc\n\n";
+
         //Assinatura Funcionando. NÂO ALTERAR!
+        cout << "@github.com/c3nt4ur1 - 2021\n";
+        cout << "Developer's Info:\n";
+        cout << "Version: 1.1.0\n";
+        cout << "Compiler: MinGw 4.4.2\n";
+        cout << "OS: Win10 20h2\n";
+        cout << "Developer: c3nt4ur1\n";
+        cout << "Documentation avaliable in: https://github.com/c3nt4ur1/HyperCalc\n\n";
         cout << "   _______   _______   __      __   ___________   ________    _     _    ________     __" << endl;
         cout << " /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |   |__|" << endl;
         cout << " |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  |__| _|    __" << endl;
         cout << " |  |       | ____|   | | / / | |      |  |      |   __   |  | |   | |  | | \\ \\      |  |" << endl;
         cout << " |  |____   | |____   | |/ /  | |      |  |      |  |  |  |  | |___| |  | |  \\ \\     |  |" << endl;
         cout << "  \\______/  |______|  |___/   |_|      |__|      |__|  |__|   \\_____/   |_|  \\__\\    |__|"  << endl;
+        cout << "\n\nBem vindo ao HyperCalc!\n\n";
 
         cout << "Digite o numero da categoria de calculo desejado: \n";
         cout << "1)Operacoes Basicas\n";
