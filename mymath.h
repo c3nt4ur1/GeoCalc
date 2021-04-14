@@ -31,12 +31,19 @@ double ai(double n);
 double ae (double n);
 
 //Funções Físicas
-double fun_densidade(double massa, double volume);
-double fun_massa(double volume, double densidade);
-double fun_volume(double densidade, double massa);
+double densidade(double massa, double volume);
+double massa(double volume, double densidade);
+double volume(double densidade, double massa);
 double cel_fare(double temp_celsius);
 double fare_cel(double temp_farenheit);
 double cel_kel(double temp_celsius);
 double kel_cel(double temp_kelvin);
 
 #endif //GEOCALC_MYMATH_H
+
+//   _______   _______   __      __   ___________   ________    _     _    ________    __
+// /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|
+// |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  |__| _|   __
+// |  |       | ____|   | | / / | |      |  |      |   __   |  | |   | |  | | \ \     |  |
+// |  |____   | |____   | |/ /  | |      |  |      |  |  |  |  | |___| |  | |  \ \    |  |
+// \_______/  |______|  |___/   |_|      |__|      |__|  |__|   \_____/   |_|   \_\   |__|

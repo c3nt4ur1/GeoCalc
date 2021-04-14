@@ -26,37 +26,25 @@ void cat1(){
         cin >> num1;
         cout << "Digite a segunda parcela: ";
         cin >> num2;
-
-        double total;
-        total = soma(num1, num2);
-        cout << "TOTAL: " << total << endl;
+        cout << "TOTAL: " << soma(num1, num2) << endl;
     }else if(operacao == '2'){
         cout << "Digite o minuendo: ";
         cin >> num1;
         cout << "Digite o subtraendo: ";
         cin >> num2;
-
-        double resto;
-        resto = subtracao(num1, num2);
-        cout << "RESTO: " << resto << endl;
+        cout << "RESTO: " << subtracao(num1, num2) << endl;
     }else if(operacao == '3'){
         cout << "Digite o primeiro fator: ";
         cin >> num1;
         cout << "Digite o segundo fator: ";
         cin >> num2;
-
-        double produto;
-        produto = multiplicacao(num1, num2);
-        cout << "PRODUTO: " << produto << endl;
+        cout << "PRODUTO: " << multiplicacao(num1, num2) << endl;
     }else if(operacao == '4'){
         cout << "Digite o dividendo: ";
         cin >> num1;
         cout << "Digite o divisor: ";
         cin >> num2;
-
-        double quociente;
-        quociente = divisao(num1, num2);
-        cout << "QUOCIENTE: " << quociente;
+        cout << "QUOCIENTE: " << divisao(num1, num2) << endl;
     }else {
         cout << "Operacao Invalida\n";
     }
@@ -76,24 +64,18 @@ void cat2(){
     cout << "8)Cateto\n";
     cin >> funcao;
 
-    double area;
     double lados;
 
 
     if (funcao == '1') {
         cout << "Digite o lado do quadrado: ";
         cin >> lados;
-
-        area = area_quadrado(lados);
-
-        cout << "AREA: " << area << endl;
+        cout << "AREA: " << area_quadrado(lados) << endl;
 
     } else if (funcao == '2') {
         cout << "Digite a medida do lado do cubo: ";
         cin >> lados;
-
-        double vol_cubo = volume_cubo(lados);
-        cout << vol_cubo;
+        cout << volume_cubo(lados) << endl;
 
     } else if (funcao == '3') {
         double base;
@@ -103,58 +85,35 @@ void cat2(){
         cin >> base;
         cout << "Digite a altura do triangulo: ";
         cin >> altura;
-
-        area = area_triangulo(base, altura);
-        cout << "AREA: " << area << endl;
-
+        cout << "AREA: " << area_triangulo(base, altura) << endl;
     } else if (funcao == '4') {
         cout << "Digite o numero de lados da figura: ";
         cin >> lados;
-
-        double soma_angulos_internos;
-        soma_angulos_internos = si(lados);
-        cout << "SOMA DOS ANGULOS INTERNOS: " << soma_angulos_internos << endl;
-
+        cout << "SOMA DOS ANGULOS INTERNOS: " << si(lados) << endl;
     } else if (funcao == '5') {
         cout << "Digite o numero de lados da figura: ";
         cin >> lados;
-
-        double angulo_interno;
-
-        angulo_interno = ai(lados);
-        cout << "VALOR DE UM ANGULO INTERNO: " << angulo_interno << endl;
-
+        cout << "VALOR DE UM ANGULO INTERNO: " << ai(lados) << endl;
     } else if (funcao == '6') {
         cout << "Digite o numero de lados da figura: ";
         cin >> lados;
-
-        double angulo_externo;
-
-        angulo_externo = ae(lados);
-        cout << "VALOR DE UM ANGULO EXTERNO: " << angulo_externo << endl;
-
+        cout << "VALOR DE UM ANGULO EXTERNO: " << ae(lados) << endl;
     } else if (funcao == '7') {
-        double ca, co, hi;
+        double ca, co;
 
         cout << "Digite o Cateto Adjacente: ";
         cin >> ca;
         cout << "Digite o Cateto Oposto: ";
         cin >> co;
-
-        hi = hipo(ca, co);
-        cout << "HIPOTENUSA: " << hi << endl;
-
+        cout << "HIPOTENUSA: " << hipo(ca, co) << endl;
     } else if (funcao == '8') {
-        double cat1, cat2, hi;
+        double cat1, hi;
 
         cout << "Digite o Cateto Conhecido: ";
         cin >> cat1;
         cout << "Digite a Hipotenusa: ";
         cin >> hi;
-
-        cat2 = cat(cat1, hi);
-        cout << "CATETO DESCONHECIDO: " << cat2 << endl;
-
+        cout << "CATETO DESCONHECIDO: " << cat(cat1, hi) << endl;
     }
 }
 void cat3(){
@@ -168,23 +127,16 @@ void cat3(){
     if (op == '1') {
         double base;
         double expoente;
-
         cout << "Digite a base: ";
         cin >> base;
         cout << "Digite o expoente: ";
         cin >> expoente;
-
-        double power = potencia(base, expoente);
-        cout << "POTENCIA " << expoente << " DE " << base << ": " << power << endl;
-
+        cout << "POTENCIA " << expoente << " DE " << base << ": " << potencia(base, expoente) << endl;
     } else if (op == '2') {
         double radical;
-
         cout << "Digite o radical: ";
         cin >> radical;
-
-        double raiz = raiz_quadrada(radical);
-        cout << "A raiz quadrada de " << radical << " e: " << raiz << endl;
+        cout << "A raiz quadrada de " << radical << " e: " << raiz_quadrada(radical) << endl;
     }
 }
 void cat4(){
@@ -201,7 +153,6 @@ void cat4(){
         cin >> b;
         cout << "Digite o coeficiente C:";
         cin >> c;
-
         bhaskara(a, b, c);
     }
 }
@@ -218,51 +169,28 @@ void cat5(){
     cout << "6)Celsius - Kelvin\n";
     cout << "7)Kelvin - Celsius\n";
     cin >> formula;
-
-    double densidade, massa, volume;
-
     if (formula == 1) {
+        double massa, volume;
         cout << "Digite a massa: ";
         cin >> massa;
         cout << "Digite o volume: ";
         cin >> volume;
-        densidade = fun_densidade(massa, volume);
-
-        cout << "DENSIDADE: " << densidade << endl;
-
-        cout << "Pressione qualquer tecla para continuar...\n";
-        cin.ignore();
-        cin.get();
-
+        cout << "DENSIDADE: " << densidade(massa, volume) << endl;
     } else if (formula == 2) {
+        double densidade, massa;
         cout << "Digite a massa: ";
         cin >> massa;
         cout << "Digite a densidade: ";
         cin >> densidade;
-
-        volume = fun_volume(densidade, massa);
-
-        cout << "VOLUME: " << volume << endl;
-
-        cout << "Pressione qualquer tecla para continuar...\n";
-        cin.ignore();
-        cin.get();
-
+        cout << "VOLUME: " << volume(densidade, massa) << endl;
     } else if (formula == 3) {
+        double densidade, volume;
         cout << "Digite a densidade: ";
         cin >> densidade;
         cout << "Digite o volume: ";
         cin >> volume;
-
-        massa = fun_massa(volume, densidade);
-        cout << "MASSA: " << massa << endl;
-
-        cout << "Pressione qualquer tecla para continuar...\n";
-        cin.ignore();
-        cin.get();
+        cout << "MASSA: " << massa(volume, densidade) << endl;
     }
-
-
     if (formula >= 4 && formula <= 7) {
         double temp_celsius, temp_farenheit, temp_kelvin;
 
@@ -270,49 +198,19 @@ void cat5(){
 
             cout << "Digite a temperatura na escala Celsius\n";
             cin >> temp_celsius;
-            temp_farenheit = cel_fare(temp_celsius);
-
-            cout << "TEMPERATURA EM GRAUS FARENHEIT: " << temp_farenheit << "F\n";
-
-            cout << "Pressione qualquer tecla para continuar...\n";
-            cin.ignore();
-            cin.get();
-
+            cout << "TEMPERATURA EM GRAUS FARENHEIT: " << cel_fare(temp_celsius) << "F\n";
         } else if (formula == 5) {
             cout << "Digite a temperatura na escala Farenheit: ";
             cin >> temp_farenheit;
-
-            temp_celsius = fare_cel(temp_farenheit);
-
-            cout << "TEMPERATURA EM GRAUS CELSIUS: " << temp_celsius << "C\n";
-
-            cout << "Pressione qualquer tecla para continuar...\n";
-            cin.ignore();
-            cin.get();
-
+            cout << "TEMPERATURA EM GRAUS CELSIUS: " << fare_cel(temp_farenheit) << "C\n";
         } else if (formula == 6) {
             cout << "Digite a temperatura na escala Celsius: ";
             cin >> temp_celsius;
-
-            temp_kelvin = cel_kel(temp_celsius);
-
-            cout << "TEMPERATURA EM GRAUS KELVIN: " << temp_kelvin << "K\n";
-
-            cout << "Pressione qualquer tecla para continuar...\n";
-            cin.ignore();
-            cin.get();
-
+            cout << "TEMPERATURA EM GRAUS KELVIN: " << cel_kel(temp_celsius) << "K\n";
         } else if (formula == 7) {
             cout << "Digite a temperatura em graus Kelvin: ";
             cin >> temp_kelvin;
-
-            temp_celsius = kel_cel(temp_kelvin);
-
-            cout << "TEMPERATURA EM GRAUS CELSIUS: " << temp_celsius << "C\n";
-
-            cout << "Pressione qualquer tecla para continuar...\n";
-            cin.ignore();
-            cin.get();
+            cout << "TEMPERATURA EM GRAUS CELSIUS: " << kel_cel(temp_kelvin) << "C\n";
         }
 
     }

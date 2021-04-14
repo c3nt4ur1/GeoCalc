@@ -127,13 +127,13 @@ double ae (double n)
 }
 
 //Funções Físicas
-double fun_densidade(double massa, double volume){
+double densidade(double massa, double volume){
     return massa / volume;
 }
-double fun_massa(double volume, double densidade){
+double massa(double volume, double densidade){
     return volume * densidade;
 }
-double fun_volume(double densidade, double massa){
+double volume(double densidade, double massa){
     return massa / densidade;
 }
 double cel_fare(double temp_celsius){
@@ -152,3 +152,10 @@ double kel_cel(double temp_kelvin) {
     double temp_celsius = temp_kelvin - 273;
     return temp_celsius;
 }
+
+//   _______   _______   __      __   ___________   ________    _     _    ________    __
+// /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|
+// |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  |__| _|   __
+// |  |       | ____|   | | / / | |      |  |      |   __   |  | |   | |  | | \ \     |  |
+// |  |____   | |____   | |/ /  | |      |  |      |  |  |  |  | |___| |  | |  \ \    |  |
+// \_______/  |______|  |___/   |_|      |__|      |__|  |__|   \_____/   |_|   \_\   |__|
