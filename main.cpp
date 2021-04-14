@@ -1,24 +1,24 @@
 //©c3nt4ur1 - 2021
 
-//Criar opções -h (Help) e -a (About) e -d(DevInfo)
-// Controlar versão da build
-
 //Inclusões
-
 #include <iostream>
 #include <windows.h> //Título do console
 #include "mainFuncs.h" // Chamadas dentro das categorias 1-5
 #include "otherFunctions.h" //Outras funções
 
 // Constantes de opções: Substituem os char's no control-flow
-#define OPERACOES_BASICAS '1'
-#define FORMULAS_GEOMETRICAS '2'
-#define POTENCIAS_E_RAIZES '3'
-#define EQUACOES '4'
-#define FORMULAS_FISICAS '5'
-#define HELP 'h'
-#define DEVINFO 'd'
-#define ABOUT 'a'
+//Constantes estão escritas em HD. As letras possuem uma constante para maiúsculas e outra para minúsculas
+#define OPERACOES_BASICAS 0x31
+#define FORMULAS_GEOMETRICAS 0x32
+#define POTENCIAS_E_RAIZES 0x33
+#define EQUACOES 0x34
+#define FORMULAS_FISICAS 0x35
+#define HELP_MIN 0x68
+#define HELP_MAI 0x48
+#define DEVINFO_MIN 0x64
+#define DEVINFO_MAI  0x44
+#define ABOUT_MIN 0x61
+#define ABOUT_MAI 0x41
 //Namespaces
 using namespace std;
 int main() {
@@ -28,7 +28,6 @@ int main() {
     while (true) {
         char categoria;
 
-        //Assinatura Funcionando. NÂO ALTERAR!
         cout << "@github.com/c3nt4ur1 - 2021\n";
         cout << "\n\nBem vindo ao HyperCalc!\n\n";
 
@@ -38,7 +37,7 @@ int main() {
         cout << "3)Potencias e Raizes\n";
         cout << "4)Equacoes\n";
         cout << "5)Formulas Fisicas\n\n";
-        cout << "Para ajuda digite 'h'\n";
+        cout << "Para ajuda digite 'h'. Para mais informaçoes digite 'a'.\n";
         cin >> categoria;
 
         if (categoria == OPERACOES_BASICAS) {
@@ -80,43 +79,47 @@ int main() {
             cin.get();
             exit(0);
 
-        } else if(categoria == HELP) {
+        } else if(categoria == HELP_MIN || categoria == HELP_MAI) {
             help();
             char retornar;
             cout << "Deseja voltar à tela inicial?(S/N)";
             cin >> retornar;
             if(retornar == 'S' || retornar == 's') {
                 continue;
-            }else {
+            } else {
                 exit(0);
             }
-        }else if(categoria == DEVINFO) {
+        } else if(categoria == DEVINFO_MIN || categoria == DEVINFO_MAI) {
             devInfo();
             char retornar;
             cout << "Deseja voltar à tela inicial?(S/N)";
             cin >> retornar;
             if(retornar == 'S' || retornar == 's') {
                 continue;
-            }else {
+            } else {
                 exit(0);
             }
-        }else if(categoria == ABOUT){
+        } else if(categoria == ABOUT_MIN || categoria == ABOUT_MAI){
             about();
             char retornar;
             cout << "Deseja voltar à tela inicial?(S/N)";
             cin >> retornar;
             if(retornar == 'S' || retornar == 's') {
                 continue;
-            }else {
+            } else {
                 exit(0);
             }
-        }else {
-            cout << "Opcao Invalida. Loading Help...\n\n";
-            help(); //Ainda não definido
-            cout << "Pressione qualquer tecla para voltar à tela inicial...\n";
-            cin.get();
-            cin.ignore();
-            continue;
+        } else {
+            cout << "Opcao Invalida!\nCarregando a ajuda...\n\n";
+            help();
+            char retornar;
+            cout << "Deseja voltar à tela inicial?(S/N)";
+            cin >> retornar;
+            if(retornar == 'S' || retornar == 's') {
+                continue;
+            } else {
+                return 1;
+            }
         }
     }
 }
