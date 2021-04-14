@@ -1,12 +1,18 @@
 //©c3nt4ur1 - 2021
 
-//Inclusões
 /*
- * windows.h -> Título do console
+ * Criar opções -h (Help) e -a (About) e -d(DevInfo)
+ * Controlar versão da build
  */
+
+//Inclusões
+
+//windows.h -> Título do console
+
 #include <iostream>
 #include <windows.h>
 #include "mainFuncs.h"
+#include "otherFunctions.h"
 /*
  * Constantes de opções
  * Substituem os char's no control-flow
@@ -27,18 +33,6 @@ int main() {
 
         //Assinatura Funcionando. NÂO ALTERAR!
         cout << "@github.com/c3nt4ur1 - 2021\n";
-        cout << "Developer's Info:\n";
-        cout << "Version: 1.1.0\n";
-        cout << "Compiler: MinGw 4.4.2\n";
-        cout << "OS: Win10 20h2\n";
-        cout << "Developer: c3nt4ur1\n";
-        cout << "Documentation avaliable in: https://github.com/c3nt4ur1/HyperCalc\n\n";
-        cout << "   _______   _______   __      __   ___________   ________    _     _    ________     __" << endl;
-        cout << " /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |   |__|" << endl;
-        cout << " |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  |__| _|    __" << endl;
-        cout << " |  |       | ____|   | | / / | |      |  |      |   __   |  | |   | |  | | \\ \\      |  |" << endl;
-        cout << " |  |____   | |____   | |/ /  | |      |  |      |  |  |  |  | |___| |  | |  \\ \\     |  |" << endl;
-        cout << "  \\______/  |______|  |___/   |_|      |__|      |__|  |__|   \\_____/   |_|  \\__\\    |__|"  << endl;
         cout << "\n\nBem vindo ao HyperCalc!\n\n";
 
         cout << "Digite o numero da categoria de calculo desejado: \n";
@@ -46,25 +40,29 @@ int main() {
         cout << "2)Formulas geometricas\n";
         cout << "3)Potencias e Raizes\n";
         cout << "4)Equacoes\n";
-        cout << "5)Formulas Fisicas\n";
+        cout << "5)Formulas Fisicas\n\n";
+        cout << "Para ajuda digite 'h'\n";
         cin >> categoria;
 
         if (categoria == OPERACOES_BASICAS) {
             cat1();
             //em mainFuncs.cpp/.h
-            cout << "Pressione qualquer tecla para continuar...\n";
+            cout << "Pressione qualquer tecla para continuar...\n\n";
+            signature();
             cin.ignore();
             cin.get();
             exit(0);
         } else if (categoria == FORMULAS_GEOMETRICAS) {
             cat2();
-            cout << "Pressione qualquer tecla para continuar...\n";
+            cout << "Pressione qualquer tecla para continuar...\n\n";
+            signature();
             cin.ignore();
             cin.get();
             exit(0);
         } else if (categoria == POTENCIAS_E_RAIZES) {
             cat3();
-            cout << "Pressione qualquer tecla para continuar...\n";
+            cout << "Pressione qualquer tecla para continuar...\n\n";
+            signature();
             cin.ignore();
             cin.get();
             exit(0);
@@ -72,20 +70,46 @@ int main() {
         } else if (categoria == EQUACOES) {
 
             cat4();
-            cout << "Pressione qualquer tecla para continuar...\n";
+            cout << "Pressione qualquer tecla para continuar...\n\n";
+            signature();
             cin.ignore();
             cin.get();
             exit(0);
         } else if (categoria == FORMULAS_FISICAS) {
             cat5();
-            cout << "Pressione qualquer tecla para continuar...\n";
+            cout << "Pressione qualquer tecla para continuar...\n\n";
+            signature();
             cin.ignore();
             cin.get();
             exit(0);
 
-        } else {
-            cout << "Opcao Invalida\n";
-            cout << endl;
+        } else if(categoria == 'h') {
+            help();
+            char retornar;
+            cout << "Deseja voltar à tela inicial?(S/N)";
+            cin >> retornar;
+            if(retornar == 'S' || retornar == 's') {
+                continue;
+            }else {
+                exit(0);
+            }
+        }else if(categoria == 'd') {
+            devInfo();
+            char retornar;
+            cout << "Deseja voltar à tela inicial?(S/N)";
+            cin >> retornar;
+            if(retornar == 'S' || retornar == 's') {
+                continue;
+            }else {
+                exit(0);
+            }
+        }else{
+                cout << "Opcao Invalida. Loading Help...\n\n";
+                help(); //Ainda não definido
+                cout << "Pressione qualquer tecla para voltar à tela inicial...\n";
+                cin.get();
+                cin.ignore();
+                continue;
         }
     }
 }
