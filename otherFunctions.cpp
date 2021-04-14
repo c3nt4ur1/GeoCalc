@@ -26,3 +26,9 @@ void help(){
     cout << "opcao desejada dentro da categoria e pressione ENTER novamente. Depois insira os valores pedidos e pressione";
     cout << "ENTER depois de cada valor. Para sair do programa, ao final do cálculo, pressione qualquer tecla.\n";
 }
+void about(){
+    //0x2B = + em hexadecimal
+    cout << "This is a calculator for mathematical formulas, created by c3nt4ur1. It calculates all sorts of formulas, ";
+    cout << "like geometrical formulas, or even Bhaskara's. It is developed in C" << 0x2B << 0x2B <<  "in order to improve the program's ";
+    cout << "speed. For tecnical infomation, reload the program and input the categorie h.\n";
+}

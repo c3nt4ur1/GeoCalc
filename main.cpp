@@ -1,27 +1,24 @@
 //©c3nt4ur1 - 2021
 
-/*
- * Criar opções -h (Help) e -a (About) e -d(DevInfo)
- * Controlar versão da build
- */
+//Criar opções -h (Help) e -a (About) e -d(DevInfo)
+// Controlar versão da build
 
 //Inclusões
 
-//windows.h -> Título do console
-
 #include <iostream>
-#include <windows.h>
-#include "mainFuncs.h"
-#include "otherFunctions.h"
-/*
- * Constantes de opções
- * Substituem os char's no control-flow
- */
+#include <windows.h> //Título do console
+#include "mainFuncs.h" // Chamadas dentro das categorias 1-5
+#include "otherFunctions.h" //Outras funções
+
+// Constantes de opções: Substituem os char's no control-flow
 #define OPERACOES_BASICAS '1'
 #define FORMULAS_GEOMETRICAS '2'
 #define POTENCIAS_E_RAIZES '3'
 #define EQUACOES '4'
 #define FORMULAS_FISICAS '5'
+#define HELP 'h'
+#define DEVINFO 'd'
+#define ABOUT 'a'
 //Namespaces
 using namespace std;
 int main() {
@@ -83,7 +80,7 @@ int main() {
             cin.get();
             exit(0);
 
-        } else if(categoria == 'h') {
+        } else if(categoria == HELP) {
             help();
             char retornar;
             cout << "Deseja voltar à tela inicial?(S/N)";
@@ -93,7 +90,7 @@ int main() {
             }else {
                 exit(0);
             }
-        }else if(categoria == 'd') {
+        }else if(categoria == DEVINFO) {
             devInfo();
             char retornar;
             cout << "Deseja voltar à tela inicial?(S/N)";
@@ -103,13 +100,23 @@ int main() {
             }else {
                 exit(0);
             }
-        }else{
-                cout << "Opcao Invalida. Loading Help...\n\n";
-                help(); //Ainda não definido
-                cout << "Pressione qualquer tecla para voltar à tela inicial...\n";
-                cin.get();
-                cin.ignore();
+        }else if(categoria == ABOUT){
+            about();
+            char retornar;
+            cout << "Deseja voltar à tela inicial?(S/N)";
+            cin >> retornar;
+            if(retornar == 'S' || retornar == 's') {
                 continue;
+            }else {
+                exit(0);
+            }
+        }else {
+            cout << "Opcao Invalida. Loading Help...\n\n";
+            help(); //Ainda não definido
+            cout << "Pressione qualquer tecla para voltar à tela inicial...\n";
+            cin.get();
+            cin.ignore();
+            continue;
         }
     }
 }
