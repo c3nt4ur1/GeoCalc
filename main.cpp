@@ -6,19 +6,6 @@
 #include "mainFuncs.h" // Chamadas dentro das categorias 1-5
 #include "otherFunctions.h" //Outras funções
 
-// Constantes de opções: Substituem os char's no control-flow
-//Constantes estão escritas em HD. As letras possuem uma constante para maiúsculas e outra para minúsculas
-#define OPERACOES_BASICAS 0x31
-#define FORMULAS_GEOMETRICAS 0x32
-#define POTENCIAS_E_RAIZES 0x33
-#define EQUACOES 0x34
-#define FORMULAS_FISICAS 0x35
-#define HELP_MIN 0x68
-#define HELP_MAI 0x48
-#define DEVINFO_MIN 0x64
-#define DEVINFO_MAI  0x44
-#define ABOUT_MIN 0x61
-#define ABOUT_MAI 0x41
 //Namespaces
 using namespace std;
 int main() {
@@ -40,7 +27,7 @@ int main() {
         cout << "Para ajuda digite 'h'. Para mais informaçoes digite 'a'.\n";
         cin >> categoria;
 
-        if (categoria == OPERACOES_BASICAS) {
+        if (categoria == 0x31) {
             cat1();
             //em mainFuncs.cpp/.h
             cout << "Pressione qualquer tecla para continuar...\n\n";
@@ -48,30 +35,28 @@ int main() {
             cin.ignore();
             cin.get();
             exit(0);
-        } else if (categoria == FORMULAS_GEOMETRICAS) {
+        } else if (categoria == 0x32) {
             cat2();
             cout << "Pressione qualquer tecla para continuar...\n\n";
             signature();
             cin.ignore();
             cin.get();
             exit(0);
-        } else if (categoria == POTENCIAS_E_RAIZES) {
+        } else if (categoria == 0x33) {
             cat3();
             cout << "Pressione qualquer tecla para continuar...\n\n";
             signature();
             cin.ignore();
             cin.get();
             exit(0);
-
-        } else if (categoria == EQUACOES) {
-
+        } else if (categoria == 0x34) {
             cat4();
             cout << "Pressione qualquer tecla para continuar...\n\n";
             signature();
             cin.ignore();
             cin.get();
             exit(0);
-        } else if (categoria == FORMULAS_FISICAS) {
+        } else if (categoria == 0x35) {
             cat5();
             cout << "Pressione qualquer tecla para continuar...\n\n";
             signature();
@@ -79,48 +64,48 @@ int main() {
             cin.get();
             exit(0);
 
-        } else if(categoria == HELP_MIN || categoria == HELP_MAI) {
+        } else if(categoria == 0x68 || categoria == 0x48) {
             help();
             char retornar;
             cout << "Deseja voltar à tela inicial?(S/N)";
             cin >> retornar;
-            if(retornar == 'S' || retornar == 's') {
+            if(retornar == 0x53 || retornar == 0x73) {
                 continue;
             } else {
                 exit(0);
             }
-        } else if(categoria == DEVINFO_MIN || categoria == DEVINFO_MAI) {
+        } else if(categoria == 0x64 || categoria == 0x44) {
             devInfo();
             char retornar;
             cout << "Deseja voltar à tela inicial?(S/N)";
             cin >> retornar;
-            if(retornar == 'S' || retornar == 's') {
+            if(retornar == 0x53 || retornar == 0x73) {
                 continue;
             } else {
                 exit(0);
             }
-        } else if(categoria == ABOUT_MIN || categoria == ABOUT_MAI){
+        } else if(categoria == 0x61 || categoria == 0x41){
             about();
             char retornar;
             cout << "Deseja voltar à tela inicial?(S/N)";
             cin >> retornar;
-            if(retornar == 'S' || retornar == 's') {
+            if(retornar == 0x53 || retornar == 0x73) {
                 continue;
             } else {
                 exit(0);
             }
-        } else {
-            cout << "Opcao Invalida!\nCarregando a ajuda...\n\n";
-            help();
-            char retornar;
-            cout << "Deseja voltar à tela inicial?(S/N)";
-            cin >> retornar;
-            if(retornar == 'S' || retornar == 's') {
-                continue;
-            } else {
-                return 1;
-            }
         }
+        cout << "Opcao Invalida!\nCarregando a ajuda...\n\n";
+        help();
+        char retornar;
+        cout << "Deseja voltar à tela inicial?(S/N)";
+        cin >> retornar;
+        if(retornar == 0x53 || retornar == 0x73) {
+            continue;
+        } else {
+            return 1;
+        }
+
     }
 }
 
