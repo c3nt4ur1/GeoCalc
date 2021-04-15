@@ -1,16 +1,20 @@
 //©c3nt4ur1 - 2021
 
+//Funções em mainFuncs.cpp:
+//void cat1(), void cat2(), void cat3(), void cat4(), void cat5().
+
 //Inclusões
-#include <iostream>
+#include <iostream> //I/O Básico
 #include <windows.h> //Título do console
-#include "mainFuncs.h" // Chamadas dentro das categorias 1-5
+#include "mainFuncs.h" //Chamadas dentro das categorias 1-5 -> Substitui o código pra fazer o controle de fluxo
 #include "otherFunctions.h" //Outras funções
 
 //Namespaces
 using namespace std;
 int main() {
     //Configuração do Console
-    SetConsoleTitle("HyperCalc");
+    SetConsoleTitle("HyperCalc"); //Título
+    SetConsoleCtrlHandler(nullptr,true); //Ativa Ctrl+C / Ctrl+V para o programa
     //Programa vai dentro desse loop
     while (true) {
         char categoria;
@@ -24,12 +28,11 @@ int main() {
         cout << "3)Potencias e Raizes\n";
         cout << "4)Equacoes\n";
         cout << "5)Formulas Fisicas\n\n";
-        cout << "Para ajuda digite 'h'. Para mais informaçoes digite 'a'.\n";
+        cout << "Para ajuda digite 'h'. Para mais informacoes digite 'a'.\n";
         cin >> categoria;
 
         if (categoria == 0x31) {
             cat1();
-            //em mainFuncs.cpp/.h
             cout << "Pressione qualquer tecla para continuar...\n\n";
             signature();
             cin.ignore();
