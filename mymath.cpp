@@ -60,6 +60,19 @@ double fare_cel(double temp_farenheit){return (temp_farenheit  -32) * 1.8;}
 double cel_kel(double temp_celsius){return temp_celsius + 273;}
 double kel_cel(double temp_kelvin) {return temp_kelvin - 273;}
 
+//Outras Funções
+bool isPrime(int num){
+    int divisors = 1;
+    for(int i = 1; i < num; i++){
+        if(num % i == 0)
+            divisors++;
+    }
+    if(divisors == 2)
+        return true;
+    else
+        return false;
+}
+
 //   _______   _______   __      __   ___________   ________    _     _    ________    __
 // /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|
 // |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  |__| _|   __

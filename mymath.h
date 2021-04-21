@@ -25,10 +25,10 @@ double area_triangulo(double base, double altura);
 double area_quadrado(double lado);
 double volume_cubo(double lado);
 double hipo(double a, double b);
-double cat(double a, double c); 
+double cat(double a, double c);
 double si(double n);
 double ai(double n);
-double ae (double n);
+double ae(double n);
 
 //Funções Físicas
 double densidade(double massa, double volume);
@@ -38,6 +38,9 @@ double cel_fare(double temp_celsius);
 double fare_cel(double temp_farenheit);
 double cel_kel(double temp_celsius);
 double kel_cel(double temp_kelvin);
+
+//Outras Funções
+bool isPrime(int num);
 
 #endif //GEOCALC_MYMATH_H
 
