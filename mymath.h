@@ -39,8 +39,9 @@ double fare_cel(double temp_farenheit);
 double cel_kel(double temp_celsius);
 double kel_cel(double temp_kelvin);
 
-//Outras Funções
+//Funções de teste
 bool isPrime(int num);
+void divisores(int n);
 
 #endif //GEOCALC_MYMATH_H
 

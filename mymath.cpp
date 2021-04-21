@@ -8,6 +8,7 @@
 #include <iostream>
 #include <cmath>
 #include "mymath.h"
+using namespace std;
 
 // Funções Aritméticas Simples
 double soma (double n1, double n2){return n1 + n2;}
@@ -20,7 +21,6 @@ double potencia(double base, double expoente){return pow(base, expoente);}
 double raiz_quadrada(double radical){return sqrt(radical);}
 //Equações
 void bhaskara(double a, double b, double c){
-    using namespace std;
     double delta = (b * b) - (4 * a * c);
 
     if (a != 0){
@@ -72,7 +72,24 @@ bool isPrime(int num){
     else
         return false;
 }
-
+void divisores(int n){
+    double divs[25] = {};
+    if(isPrime(n))
+        cout << "Divisores: 1 e " << n << endl;
+    else{
+        int i = 0;
+        for(; i < n; i++){
+            if(n % i == 0){
+                divs[i] = i;
+            }
+        }
+        cout << "Divisores:";
+        for(int j = 0; j < i; j++){
+            cout << divs[i];
+        }
+        cout << endl;
+    }
+}
 //   _______   _______   __      __   ___________   ________    _     _    ________    __
 // /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|
 // |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  |__| _|   __
