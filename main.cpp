@@ -19,105 +19,106 @@ int main() {
     cout << "@github.com/c3nt4ur1 - 2021\n";
     signature();
     cout << "\nBem vindo ao HyperCalc!\n\n";
-    while (true) {
+    while(true) {
         char categoria;
-
-
-
         cout << "Digite o numero da categoria de calculo desejado: \n";
         cout << "1)Operacoes Basicas\n";
         cout << "2)Formulas geometricas\n";
         cout << "3)Potencias e Raizes\n";
         cout << "4)Equacoes\n";
         cout << "5)Formulas Fisicas\n";
-        cout << "6)Testes de Números\n\n";
+        cout << "6)Testes de Numeros\n\n";
         cout << "Para ajuda digite 'h'. Para mais informacoes digite 'a'.\n";
         cin >> categoria;
 
-        if (categoria == 1) {
-            cat1();
-            cout << "Pressione qualquer tecla para continuar...\n\n";
-            signature();
-            cin.ignore();
-            cin.get();
-            return 0;
-        } else if (categoria == 2) {
-            cat2();
-            cout << "Pressione qualquer tecla para continuar...\n\n";
-            signature();
-            cin.ignore();
-            cin.get();
-            return 0;
-        } else if (categoria == 3) {
-            cat3();
-            cout << "Pressione qualquer tecla para continuar...\n\n";
-            signature();
-            cin.ignore();
-            cin.get();
-            return 0;
-        } else if (categoria == 4) {
-            cat4();
-            cout << "Pressione qualquer tecla para continuar...\n\n";
-            signature();
-            cin.ignore();
-            cin.get();
-            return 0;
-        } else if (categoria == 5) {
-            cat5();
-            cout << "Pressione qualquer tecla para continuar...\n\n";
-            signature();
-            cin.ignore();
-            cin.get();
-            return 0;
+        if(categoria) {
+            if (categoria == 1) {
+                cat1();
+                cout << "Pressione qualquer tecla para continuar...\n\n";
+                signature();
+                cin.ignore();
+                cin.get();
+                return 0;
+            } else if (categoria == 2) {
+                cat2();
+                cout << "Pressione qualquer tecla para continuar...\n\n";
+                signature();
+                cin.ignore();
+                cin.get();
+                return 0;
+            } else if (categoria == 3) {
+                cat3();
+                cout << "Pressione qualquer tecla para continuar...\n\n";
+                signature();
+                cin.ignore();
+                cin.get();
+                return 0;
+            } else if (categoria == 4) {
+                cat4();
+                cout << "Pressione qualquer tecla para continuar...\n\n";
+                signature();
+                cin.ignore();
+                cin.get();
+                return 0;
+            } else if (categoria == 5) {
+                cat5();
+                cout << "Pressione qualquer tecla para continuar...\n\n";
+                signature();
+                cin.ignore();
+                cin.get();
+                return 0;
 
-        } else if(categoria == 6){
-            cat6();
-            cout << "Pressione qualquer tecla para continuar...\n\n";
-            signature();
-            cin.ignore();
-            cin.get();
-            return 0;
-        }
-        else if(categoria == 'h' || categoria == 'H') {
+            } else if (categoria == 6) {
+                cat6();
+                cout << "Pressione qualquer tecla para continuar...\n\n";
+                signature();
+                cin.ignore();
+                cin.get();
+                return 0;
+            } else if (categoria == 'h' || categoria == 'H') {
+                help();
+                char retornar;
+                cout << "Deseja voltar a tela inicial?(S/N)";
+                cin >> retornar;
+                if (retornar == 'S' || retornar == 's') {
+                    continue;
+                } else {
+                    return 0;
+                }
+            } else if (categoria == 'd' || categoria == 'D') {
+                devInfo();
+                char retornar;
+                cout << "Deseja voltar a tela inicial?(S/N)";
+                cin >> retornar;
+                if (retornar == 'S' || retornar == 's') {
+                    cout << endl;
+                    continue;
+                } else {
+                    return 0;
+                }
+            } else if (categoria == 'a' || categoria == 'A') {
+                about();
+                char retornar;
+                cout << "Deseja voltar a tela inicial?(S/N)";
+                cin >> retornar;
+                if (retornar == 'S' || retornar == 's') {
+                    cout << endl;
+                    continue;
+                } else {
+                    return 0;
+                }
+            }
+            cout << "Opcao Invalida!\nCarregando a ajuda...\n\n";
             help();
             char retornar;
             cout << "Deseja voltar a tela inicial?(S/N)";
             cin >> retornar;
-            if(retornar == 'S' || retornar == 's') {
+            if (retornar == 'S' || retornar == 's') {
+                cout << endl;
                 continue;
             } else {
-                return 0;
+                return 1;
             }
-        } else if(categoria == 'd' || categoria == 'D') {
-            devInfo();
-            char retornar;
-            cout << "Deseja voltar a tela inicial?(S/N)";
-            cin >> retornar;
-            if(retornar == 'S' || retornar == 's') {
-                continue;
-            } else {
-                return 0;
-            }
-        } else if(categoria == 'a' || categoria == 'A'){
-            about();
-            char retornar;
-            cout << "Deseja voltar a tela inicial?(S/N)";
-            cin >> retornar;
-            if(retornar == 'S' || retornar == 's') {
-                continue;
-            } else {
-                return 0;
-            }
-        }
-        cout << "Opcao Invalida!\nCarregando a ajuda...\n\n";
-        help();
-        char retornar;
-        cout << "Deseja voltar à tela inicial?(S/N)";
-        cin >> retornar;
-        if(retornar == 'S' || retornar == 's') {
-            continue;
-        } else {
-            return 1;
         }
     }
 }

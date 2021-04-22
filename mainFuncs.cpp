@@ -78,8 +78,7 @@ void cat2(){
         cout << volume_cubo(lados) << endl;
 
     } else if (funcao == '3') {
-        double base;
-        double altura;
+        double base, altura;
 
         cout << "Digite a base do triangulo: ";
         cin >> base;
@@ -126,7 +125,7 @@ void cat3(){
 
     if (op == '1') {
         double base;
-        double expoente;
+        int expoente;
         cout << "Digite a base: ";
         cin >> base;
         cout << "Digite o expoente: ";

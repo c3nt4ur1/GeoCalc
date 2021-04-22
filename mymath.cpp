@@ -1,8 +1,8 @@
 //©c3nt4ur1 - 2021
 
-/*
- *  Created by c3nt4ur1 on 18/03/2021.
- */
+//
+//  Created by c3nt4ur1 on 18/03/2021.
+//
 
 //Funções matemáticas para serem usadas nas mainFuncs
 #include <iostream>
@@ -16,8 +16,14 @@ double subtracao (double minuendo, double subtraendo){return minuendo - subtraen
 double multiplicacao (double fat1, double fat2){return fat1 * fat2;}
 double divisao (double dividendo, double divisor){return dividendo / divisor;}
 
-//Potência de qualquer grau double e raizes quadradas
-double potencia(double base, double expoente){return pow(base, expoente);}
+//Potência de qualquer grau int e raizes quadradas
+double potencia(double base, int expoente){
+    double potencia = base;
+    for(int i = 1; i < expoente; i++){
+        potencia *= base;
+    }
+    return potencia;
+}
 double raiz_quadrada(double radical){return sqrt(radical);}
 //Equações
 void bhaskara(double a, double b, double c){
