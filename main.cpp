@@ -14,7 +14,7 @@ using namespace std;
 int main() {
     //Configuração do Console
     SetConsoleTitle("HyperCalc"); //Título do Console
-    SetConsoleCtrlHandler(nullptr, true);
+    SetConsoleCtrlHandler(nullptr, true); //Habilita os comandos Ctrl+C e Ctrl+V para cópia e cola
     //Programa vai dentro desse loop
     cout << "@github.com/c3nt4ur1 - 2021\n";
     signature();
@@ -32,43 +32,42 @@ int main() {
         cin >> categoria;
 
         if(categoria) {
-            if (categoria == 1) {
+            if (categoria == '1') {
                 cat1();
                 cout << "Pressione qualquer tecla para continuar...\n\n";
                 signature();
                 cin.ignore();
                 cin.get();
                 return 0;
-            } else if (categoria == 2) {
+            } else if (categoria == '2') {
                 cat2();
                 cout << "Pressione qualquer tecla para continuar...\n\n";
                 signature();
                 cin.ignore();
                 cin.get();
                 return 0;
-            } else if (categoria == 3) {
+            } else if (categoria == '3') {
                 cat3();
                 cout << "Pressione qualquer tecla para continuar...\n\n";
                 signature();
                 cin.ignore();
                 cin.get();
                 return 0;
-            } else if (categoria == 4) {
+            } else if (categoria == '4') {
                 cat4();
                 cout << "Pressione qualquer tecla para continuar...\n\n";
                 signature();
                 cin.ignore();
                 cin.get();
                 return 0;
-            } else if (categoria == 5) {
+            } else if (categoria == '5') {
                 cat5();
                 cout << "Pressione qualquer tecla para continuar...\n\n";
                 signature();
                 cin.ignore();
                 cin.get();
                 return 0;
-
-            } else if (categoria == 6) {
+            } else if (categoria == '6') {
                 cat6();
                 cout << "Pressione qualquer tecla para continuar...\n\n";
                 signature();

@@ -10,6 +10,7 @@
 #include "mymath.h"
 using namespace std;
 
+namespace maths {
 // Funções Aritméticas Simples
 double soma (double n1, double n2){return n1 + n2;}
 double subtracao (double minuendo, double subtraendo){return minuendo - subtraendo;}
@@ -28,11 +29,9 @@ double raiz_quadrada(double radical){return sqrt(radical);}
 //Equações
 void bhaskara(double a, double b, double c){
     double delta = (b * b) - (4 * a * c);
-
     if (a != 0){
         if (delta > 0){
             double root1, root2;
-
             root1 = (-b + sqrt(delta)) / (2 * a);
             root2 = (-b - sqrt(delta)) / (2 * a);
 
@@ -49,23 +48,25 @@ void bhaskara(double a, double b, double c){
     }
 }
 //Funções Geométricas
-double area_triangulo (double base, double altura){return (base * altura) / 2;}
-double area_quadrado (double lado){return (double)lado * lado;}
-double volume_cubo(double lado){return lado * lado * lado;}
-double hipo(double a, double b){return  sqrt((a * a) + (b * b));}
-double cat(double a, double c){return sqrt((c * c) - (a * a));}
-double si (double n){return (n-2) * 180;}
-double ai(double n){return si(n) / n;}
-double ae (double n){return 360 / n;}
-//Funções Físicas
-double densidade(double massa, double volume){return massa / volume;}
-double massa(double volume, double densidade){return volume * densidade;}
-double volume(double densidade, double massa){return massa / densidade;}
-double cel_fare(double temp_celsius){return (temp_celsius * 1.8) + 32;}
-double fare_cel(double temp_farenheit){return (temp_farenheit  -32) * 1.8;}
-double cel_kel(double temp_celsius){return temp_celsius + 273;}
-double kel_cel(double temp_kelvin) {return temp_kelvin - 273;}
 
+    double area_triangulo(double base, double altura) { return (base * altura) / 2; }
+    double area_quadrado(double lado) { return (double) lado * lado; }
+    double volume_cubo(double lado) { return lado * lado * lado; }
+    double hipo(double a, double b) { return sqrt((a * a) + (b * b)); }
+    double cat(double a, double c) { return sqrt((c * c) - (a * a)); }
+    double si(double n) { return (n - 2) * 180; }
+    double ai(double n) { return si(n) / n; }
+    double ae(double n) { return 360 / n; }
+
+//Funções Físicas
+    double densidade(double massa, double volume) { return massa / volume; }
+    double massa(double volume, double densidade) { return volume * densidade; }
+    double volume(double densidade, double massa) { return massa / densidade; }
+    double cel_fare(double temp_celsius) { return (temp_celsius * 1.8) + 32; }
+    double fare_cel(double temp_farenheit) { return (temp_farenheit - 32) * 1.8; }
+    double cel_kel(double temp_celsius) { return temp_celsius + 273; }
+    double kel_cel(double temp_kelvin) { return temp_kelvin - 273; }
+}
 //Outras Funções
 bool isPrime(int num){
     int divisors = 1;
@@ -78,7 +79,7 @@ bool isPrime(int num){
     else
         return false;
 }
-void divisores(int n){
+void divisores(int n){ //Está com erro lógico
     double divs[25] = {};
     if(isPrime(n)) {
         cout << "Divisores: 1 e " << n << endl;
@@ -98,6 +99,7 @@ void divisores(int n){
         cout << endl;
     }
 }
+
 //   _______   _______   __      __   ___________   ________    _     _    ________    __
 // /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|
 // |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  |__| _|   __

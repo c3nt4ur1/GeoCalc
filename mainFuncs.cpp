@@ -7,6 +7,7 @@
 #include "mainFuncs.h"
 #include "mymath.h"
 using namespace std;
+using namespace maths;
 
 void cat1(){
     double num1, num2;
@@ -222,7 +223,7 @@ void cat6() {
     cin >> op;
     if (op == '1') {
         int n;
-        cout << "Digite o número a ser testado: ";
+        cout << "Digite o numero a ser testado: ";
         cin >> n;
         if (isPrime(n))
             cout << "O numero " << n << " e primo.\n";
@@ -230,7 +231,7 @@ void cat6() {
             cout << "O numero " << n << " nao e primo\n";
     }else if(op == '2'){
         int n;
-        cout << "Digite o número a ser testado: ";
+        cout << "Digite o numero a ser testado: ";
         cin >> n;
         divisores(n);
     }
