@@ -40,6 +40,9 @@ inline namespace maths {
 bool isPrime(int num);
 void divisores(int n);
 
+//Outras Funções
+int fat(int n);
+
 #endif //GEOCALC_MYMATH_H
 
 //   _______   _______   __      __   ___________   ________    _     _    ________    __

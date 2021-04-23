@@ -66,7 +66,7 @@ inline namespace maths {
     double cel_kel(double temp_celsius) { return temp_celsius + 273; }
     double kel_cel(double temp_kelvin) { return temp_kelvin - 273; }
 }
-//Outras Funções
+//Funções Para Testar Números
 bool isPrime(int num){
     int divisors = 0;
     for(int i = 1; i < num; i++){
@@ -97,7 +97,13 @@ void divisores(int n){
     }
     cout << endl;
 }
-
+//Outras Funções
+int fat(int n){
+    for(int i = 0; i < n; i++){
+        n *= i;
+    }
+    return n;
+}
 
 //   _______   _______   __      __   ___________   ________    _     _    ________    __
 // /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|

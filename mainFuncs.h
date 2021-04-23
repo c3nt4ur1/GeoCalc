@@ -13,6 +13,7 @@ void cat3();
 void cat4();
 void cat5();
 void cat6();
+void cat7();
 
 #endif //HYPERCALC_MAINFUNCS_H
 

@@ -26,7 +26,8 @@ int main() {
         cout << "3)Potencias e Raizes\n";
         cout << "4)Equacoes\n";
         cout << "5)Formulas Fisicas\n";
-        cout << "6)Testes de Numeros\n\n";
+        cout << "6)Testes de Numeros\n";
+        cout << "7)Outras Funcoes\n\n";
         cout << "Para ajuda digite 'h'. Para mais informacoes digite 'a'.\n";
         cin >> categoria;
 
@@ -73,7 +74,14 @@ int main() {
                 cin.ignore();
                 cin.get();
                 return 0;
-            } else if (categoria == 'h' || categoria == 'H') {
+            } else if(categoria == '7'){
+                cat7();
+                cout << "Pressione qualquer tecla para continuar...\n\n";
+                signature();
+                cin.ignore();
+                cin.get();
+                return 0;
+            }else if (categoria == 'h' || categoria == 'H') {
                 help();
                 char retornar;
                 cout << "Deseja voltar a tela inicial?(S/N)";

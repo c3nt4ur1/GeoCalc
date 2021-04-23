@@ -209,6 +209,18 @@ void cat6() {
         divisores(n);
     }
 }
+void cat7(){
+    char op;
+    cout << "1)Fatorial\n";
+    cout << "Digite a operacao desejada: ";
+    cin >> op;
+    if(op == '1'){
+        int n;
+        cout << "Digite o numero desejado: ";
+        cin >> n;
+        cout << fat(n) << endl;
+    }
+}
 //   _______   _______   __      __   ___________   ________    _     _    ________    __
 // /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|
 // |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  |__| _|   __
