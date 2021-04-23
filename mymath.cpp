@@ -79,26 +79,6 @@ bool isPrime(int num){
     else
         return false;
 }
-void divisores(int n){ //Está com erro lógico
-    double divs[25] = {};
-    if(isPrime(n)) {
-        cout << "Divisores: 1 e " << n << endl;
-        exit(0);
-    }
-    else{
-        int i = 1;
-        for(; i <= n; i++){
-            if(n % i == 0){
-                divs[i - 1] = i;
-            }
-        }
-        cout << "Divisores:";
-        for(int j = 0; j < i; j++){
-            cout << divs[i];
-        }
-        cout << endl;
-    }
-}
 
 //   _______   _______   __      __   ___________   ________    _     _    ________    __
 // /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|
