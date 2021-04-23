@@ -219,6 +219,7 @@ void cat6() {
     char op;
     cout << "Qual teste deseja?\n";
     cout << "1)Primo\n";
+    cout << "2)Divisores\n";
     cin >> op;
     if (op == '1') {
         int n;
@@ -228,6 +229,11 @@ void cat6() {
             cout << "O numero " << n << " e primo.\n";
         else
             cout << "O numero " << n << " nao e primo\n";
+    }else if(op == '2'){
+        int n;
+        cout << "Digite o número a ser testado: ";
+        cin >> n;
+        divisores(n);
     }
 }
 //   _______   _______   __      __   ___________   ________    _     _    ________    __

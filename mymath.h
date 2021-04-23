@@ -38,7 +38,7 @@ inline namespace maths {
 }
 //Funções de teste
 bool isPrime(int num);
-
+void divisores(int n);
 
 #endif //GEOCALC_MYMATH_H
 

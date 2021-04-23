@@ -79,6 +79,26 @@ bool isPrime(int num){
     else
         return false;
 }
+void divisores(int n){
+    int* results = new int[30];
+
+    if(isPrime(n)){
+        cout << "Divisores de " << n << ": 1 e " << n << endl;
+        return;
+    }
+    else{
+        for(int i = 1; i < (n + 1); i ++){
+            if(n % i == 0)
+                results[i - 1] = i;
+        }
+    }
+    cout << "Divisores de " << n << ": ";
+    for(int i = 0; i < n; i++){
+        cout << results[i] << ", ";
+    }
+    cout << endl;
+}
+
 
 //   _______   _______   __      __   ___________   ________    _     _    ________    __
 // /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|
