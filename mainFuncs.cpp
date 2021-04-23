@@ -11,15 +11,9 @@ using namespace maths;
 
 void cat1(){
     double num1, num2;
-
     char operacao;
-
     cout << "Digite o numero da operacao desejada: \n";
-    cout << "1)Soma\n";
-    cout << "2)Subtracao\n";
-    cout << "3)Multiplicacao\n";
-    cout << "4)Divisao\n";
-
+    cout << "1)Soma\n" << "2)Subtracao\n" << "3)Multiplicacao\n" << "4)Divisão\n";
     cin >> operacao;
 
     if(operacao == '1'){
@@ -53,16 +47,9 @@ void cat1(){
 void cat2(){
     char funcao;
 
-    cout << "Digite a funcao desejada: \n";
-
-    cout << "1)Area de Quadrado\n";
-    cout << "2)Volume de um Cubo\n";
-    cout << "3)Area de Triangulo\n";
-    cout << "4)Soma dos Angulos Internos\n";
-    cout << "5)Angulo Interno\n";
-    cout << "6)Angulo Externo\n";
-    cout << "7)Hipotenusa\n";
-    cout << "8)Cateto\n";
+    cout << "Digite a funcao desejada:\n";
+    cout << "1)Area de Quadrado\n" << "2)Volume de um Cubo\n" << "3)Area de Triangulo\n" << "4)Soma dos Angulos Internos\n" << "5)Angulo Interno\n" <<
+    "6)Angulo Externo\n" << "7)Hipotenusa\n" << "8)Cateto\n";
     cin >> funcao;
 
     double lados;
@@ -118,10 +105,7 @@ void cat2(){
 }
 void cat3(){
     char op;
-
-    cout << "Selecione a operacao desejada: \n";
-    cout << "1)Potencia\n";
-    cout << "2)Raiz Quadrada\n";
+    cout << "Selecione a operacao desejada: \n" << "1)Potencia\n" << "2)Raiz Quadrada\n";
     cin >> op;
 
     if (op == '1') {
@@ -141,8 +125,7 @@ void cat3(){
 }
 void cat4(){
     char equacao;
-    cout << "Digite o tipo de equacao: \n";
-    cout << "1)Bhaskara\n";
+    cout << "Digite o tipo de equacao: \n" << "1)Bhaskara\n";
     cin >> equacao;
 
     if (equacao == '1') {
@@ -158,16 +141,8 @@ void cat4(){
 }
 void cat5(){
     int formula;
-    cout << "Digite a formula desejada:\n";
-    cout << "DENSIDADE\n";
-    cout << "1)Densidade\n";
-    cout << "2)Volume\n";
-    cout << "3)Massa\n";
-    cout << "TEMPERATURA\n";
-    cout << "4)Celsius - Farenheit\n";
-    cout << "5)Farenheit - Celsius\n";
-    cout << "6)Celsius - Kelvin\n";
-    cout << "7)Kelvin - Celsius\n";
+    cout << "Digite a formula desejada:\n" << "DENSIDADE\n" << "1)Densidade\n" << "2)Volume\n" << "2)Volume\n" << "3)Massa\n" << "TEMPERATURA\n"
+            << "4)Celsius - Farenheit\n" << "5)Farenheit - Celsius\n" << "6)Celsius - Kelvin\n" << "7)Kelvin - Celsius\n";
     cin >> formula;
     if (formula == 1) {
         double massa, volume;
@@ -217,9 +192,7 @@ void cat5(){
 }
 void cat6() {
     char op;
-    cout << "Qual teste deseja?\n";
-    cout << "1)Primo\n";
-    cout << "2)Divisores\n";
+    cout << "Qual teste deseja?\n" << "1)Primo\n" << "2)Divisores\n";
     cin >> op;
     if (op == '1') {
         int n;

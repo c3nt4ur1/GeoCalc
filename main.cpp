@@ -8,7 +8,6 @@
 #include <windows.h> //Título do console
 #include "mainFuncs.h" //Chamadas dentro das categorias 1-5 -> Substitui o código pra fazer o controle de fluxo
 #include "otherFunctions.h" //Outras funções
-
 //Namespaces
 using namespace std;
 int main() {
@@ -118,6 +117,8 @@ int main() {
             } else {
                 return 1;
             }
+        }else{
+            return -1;
         }
     }
 }
