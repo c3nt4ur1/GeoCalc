@@ -48,7 +48,6 @@ inline namespace maths {
         }
     }
     //Funções Geométricas
-
     double area_triangulo(double base, double altura) { return (base * altura) / 2; }
     double area_quadrado(double lado) { return (double) lado * lado; }
     double volume_cubo(double lado) { return lado * lado * lado; }
@@ -69,7 +68,7 @@ inline namespace maths {
 }
 //Outras Funções
 bool isPrime(int num){
-    int divisors = 1;
+    int divisors = 0;
     for(int i = 1; i < num; i++){
         if(num % i == 0)
             divisors++;
@@ -84,9 +83,9 @@ void divisores(int n){
 
     if(isPrime(n)){
         cout << "Divisores de " << n << ": 1 e " << n << endl;
+        cout << "O numero e primo\n";
         return;
-    }
-    else{
+    }else{
         for(int i = 1; i < (n + 1); i ++){
             if(n % i == 0)
                 results[i - 1] = i;
