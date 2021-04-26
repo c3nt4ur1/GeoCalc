@@ -1,9 +1,13 @@
 //©c3nt4ur1 - 2021
 
 //Funções em mainFuncs.cpp:
-//void cat1(), void cat2(), void cat3(), void cat4(), void cat5().
+//void cat1(), void cat2(), void cat3(), void cat4(), void cat5() e void cat6();
 
 //Inclusões
+#if !__cplusplus || !__STDC__ //Impede o código de ser compilado por um compilador que não seja C++ padrão
+#error This program must be compiled by a C++ dafault compiler
+
+#else //Compila somente com um compilador C++ padrão
 #include <iostream> //I/O Básico
 #include <windows.h> //Título do console
 #include "mainFuncs.h" //Chamadas dentro das categorias 1-5 -> Substitui o código pra fazer o controle de fluxo
@@ -130,7 +134,7 @@ int main() {
         }
     }
 }
-
+#endif
 //   _______   _______   __      __   ___________   ________    _     _    ________    __
 // /  _____/  | _____|  | |    /  |  |___    ___|  |   ___  |  | |   | |  |   ___  |  |__|
 // |  |       | |___    | |  / /| |      |  |      |  |__|  |  | |   | |  |  |__| _|   __
