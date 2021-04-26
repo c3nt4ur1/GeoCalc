@@ -7,41 +7,68 @@
 #ifndef GEOCALC_MYMATH_H
 #define GEOCALC_MYMATH_H
 
-inline namespace maths {
+inline namespace basicOps {
     //Quatro Operações
     double soma(double n1, double n2);
+
     double subtracao(double minuendo, double subtraendo);
+
     double multiplicacao(double fat1, double fat2);
+
     double divisao(double dividendo, double divisor);
+}
+inline namespace rootsAndPowers {
     //Potência de qualquer grau double e raizes quadradas
     double potencia(double base, int expoente);
+
     double raiz_quadrada(double radical);
+}
+inline namespace equations {
     //Equações
     void bhaskara(double a, double b, double c);
+}
+inline namespace geometry {
     //Funções Geométricas
     double area_triangulo(double base, double altura);
+
     double area_quadrado(double lado);
+
     double volume_cubo(double lado);
+
     double hipo(double a, double b);
+
     double cat(double a, double c);
+
     double si(double n);
+
     double ai(double n);
+
     double ae(double n);
+}
+inline namespace phisics {
     //Funções Físicas
     double densidade(double massa, double volume);
-    double massa(double volume, double densidade);
-    double volume(double densidade, double massa);
-    double cel_fare(double temp_celsius);
-    double fare_cel(double temp_farenheit);
-    double cel_kel(double temp_celsius);
-    double kel_cel(double temp_kelvin);
-    //Outras Funções
-    int fat(int n);
-}
 
+    double massa(double volume, double densidade);
+
+    double volume(double densidade, double massa);
+
+    double cel_fare(double temp_celsius);
+
+    double fare_cel(double temp_farenheit);
+
+    double cel_kel(double temp_celsius);
+
+    double kel_cel(double temp_kelvin);
+}
+    //Outras Funções
+    int fatorial(int n);
+
+inline namespace tests{
 //Funções de teste -> Geram algum erro se colocar dentro do namespace
 bool isPrime(int num);
 void divisores(int n);
+}
 
 #endif //GEOCALC_MYMATH_H
 
